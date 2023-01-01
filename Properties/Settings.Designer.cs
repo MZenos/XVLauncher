@@ -73,7 +73,7 @@ namespace XVLauncher.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("23982414")]
+        [global::System.Configuration.DefaultSettingValueAttribute("34849384")]
         public string ProjectID {
             get {
                 return ((string)(this["ProjectID"]));
