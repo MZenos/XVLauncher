@@ -177,6 +177,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Resource Include="LogoXVL.ico" />
+    <Resource Include="Resources\LOGO DD2.png" />
     <Content Include="Resources\s1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

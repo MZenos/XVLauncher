@@ -153,22 +153,22 @@
             </Button.Template>
         </Button>
         <Grid x:Name="BarGrid">
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="42,522,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="43,521,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="44,520,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="45,519,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="46,518,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="47,517,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="48,516,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="49,515,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="50,514,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="51,513,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="52,512,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="53,511,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="54,510,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="55,509,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="56,508,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="1" VerticalAlignment="Top" Width="546" Margin="57,507,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,524,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,522,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,522,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,520,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,520,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,518,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,518,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,516,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,516,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,514,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,514,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,512,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,512,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,510,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,510,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,508,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
         </Grid>
         <Border x:Name="TopBar" Height="42" VerticalAlignment="Top" MouseDown="MoveWindow">
             <Border.Background>
@@ -187,7 +187,7 @@
                 <BlurEffect Radius="20"/>
             </Border.Effect>
         </Border>
-        <Label x:Name="windowName" Content="Your App Name" HorizontalAlignment="Left" Margin="23,1,0,0" VerticalAlignment="Top" Width="361" FontFamily="Barlow Condensed Medium" FontSize="20" Foreground="White" MouseDown="MoveWindow"/>
+        <Label x:Name="windowName" Content="Dimension Defender" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Width="361" FontFamily="Barlow Condensed Medium" FontSize="20" Foreground="White" MouseDown="MoveWindow"/>
         <Label x:Name="infoLabel" Content="Info label (Here goes speed, status and any info available)" Margin="41,533,191,8" FontFamily="Barlow Condensed" FontSize="14" Foreground="LightGray"/>
         <Border x:Name="optionWindow" Margin="0,42,0,0" Background="#FF23272B" Visibility="Hidden">
             <Grid>

@@ -137,7 +137,7 @@ https://github.com/settings/tokens</comment>
     <value>#FF1B86FF</value>
   </data>
   <data name="Executable" xml:space="preserve">
-    <value>Game.exe</value>
+    <value>LancerLeJeu.bat</value>
   </data>
   <data name="InstallDirectory" xml:space="preserve">
     <value />
