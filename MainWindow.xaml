@@ -103,8 +103,13 @@
     </Window.Resources>
 
     <Grid Height="600">
-        <Image x:Name="bg" Stretch="UniformToFill" Source="Resources/s1.png" Margin="0,42,0,127"/>
-        <Border Opacity="1" Height="126" VerticalAlignment="Bottom">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="103*"/>
+            <RowDefinition Height="475*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="bg" Stretch="UniformToFill" Source="Resources/s1.png" Grid.RowSpan="3"/>
+        <Border Opacity="1" Height="136" VerticalAlignment="Top" Margin="0,480,0,0" Grid.Row="2">
             <Border.Background>
                 <ImageBrush x:Name="BottomBarBg" ImageSource="Resources/s1.png" Stretch="UniformToFill" Viewport="0,-356,800,500" ViewportUnits="Absolute" AlignmentY="Bottom">
                     <ImageBrush.RelativeTransform>
@@ -121,7 +126,73 @@
                 <BlurEffect Radius="4" KernelType="Box"/>
             </Border.Effect>
         </Border>
-        <Border Opacity="0.7" Height="126" VerticalAlignment="Bottom">
+        <Image x:Name="barres" Stretch="UniformToFill" Source="Resources/truc.png" Grid.RowSpan="3"/>
+        <Border Opacity="1" Height="136" VerticalAlignment="Top" Margin="0,480,0,0" Grid.Row="2">
+            <Border.Background>
+                <ImageBrush x:Name="trucs2" ImageSource="Resources/s1.png" Stretch="UniformToFill" Viewport="0,-356,800,500" ViewportUnits="Absolute" AlignmentY="Bottom">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1.5" ScaleY="1.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Border.Background>
+            <Border.Effect>
+                <BlurEffect Radius="4" KernelType="Box"/>
+            </Border.Effect>
+        </Border>
+        <Image x:Name="logo" Stretch="UniformToFill" Source="Resources/LOGO DD2.png" Margin="50,-229,50,446" Grid.RowSpan="3"/>
+        <Border Opacity="1" Height="136" VerticalAlignment="Top" Margin="0,480,0,0" Grid.Row="2">
+            <Border.Background>
+                <ImageBrush x:Name="truc" ImageSource="Resources/LOGO DD2.png" Stretch="UniformToFill" Viewport="0,-356,800,500" ViewportUnits="Absolute" AlignmentY="Bottom">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1.5" ScaleY="1.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Border.Background>
+            <Border.Effect>
+                <BlurEffect Radius="4" KernelType="Box"/>
+            </Border.Effect>
+        </Border>
+        <Button x:Name="recoveryButton" Content="{x:Static language:Lang.recover}" HorizontalAlignment="Left" Background="#FF588B40" Foreground="White" VerticalAlignment="Top" Click="Recover" Height="40" Margin="495,320,0,0" Width="102" RenderTransformOrigin="0.502,0.556" Grid.Row="2">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border x:Name="border" CornerRadius="2" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                        <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsDefaulted" Value="True">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" TargetName="border" Value="#FF1B86FF"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="#FF062640"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="#FF1B86FF"/>
+                        </Trigger>
+                        <Trigger Property="ToggleButton.IsChecked" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="#FFBCDDEE"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="#FF245A83"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#FF838383"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Border Opacity="0.7" Height="137" VerticalAlignment="Top" Margin="0,486,0,0" Grid.Row="2">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="Gray" Offset="0"/>
@@ -130,7 +201,7 @@
             </Border.Background>
 
         </Border>
-        <Button x:Name="button" Content="{x:Static language:Lang.download}" Height="80" Margin="0,0,23,23" Width="140" FontSize="24" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF588B40" Foreground="White">
+        <Button x:Name="button" Content="{x:Static language:Lang.download}" Height="80" Margin="0,300,0,0" Width="140" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#FF588B40" Foreground="White" Click="button_Click" Grid.Row="2">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type ButtonBase}">
                     <Border x:Name="border" CornerRadius="2" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
@@ -152,27 +223,40 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Grid x:Name="BarGrid">
-            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,524,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,522,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,522,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,520,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,520,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,518,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,518,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,516,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,516,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,514,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,514,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,512,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,512,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,510,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="546" Margin="46,510,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
-            <ProgressBar HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="546" Margin="46,508,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+        <Label x:Name="discord" Style="{StaticResource ResourceKey=HyperlinkLabel}" HorizontalAlignment="Left" Width="50" VerticalAlignment="Bottom" Grid.Row="2" Margin="200,0,0,5">
+            <Hyperlink NavigateUri="https://discord.gg/7XWyZBP" RequestNavigate="Hyperlink_RequestNavigate">Discord</Hyperlink>
+        </Label>
+        <Label x:Name="workshop" Style="{StaticResource ResourceKey=HyperlinkLabel}" HorizontalAlignment="Left" Width="117" VerticalAlignment="Top" Grid.Row="2" Margin="283,444,0,0">
+            <Hyperlink NavigateUri="https://pokemonworkshop.com/fr" RequestNavigate="Hyperlink_RequestNavigate">Pokemon Workshop</Hyperlink>
+        </Label>
+        <Label x:Name="xvlauncher" Style="{StaticResource ResourceKey=HyperlinkLabel}" HorizontalAlignment="Left" Width="76" VerticalAlignment="Top" Grid.Row="2" Margin="424,444,0,0">
+            <Hyperlink NavigateUri="https://github.com/sasso-effe/XVLauncher" RequestNavigate="Hyperlink_RequestNavigate">XV Launcher</Hyperlink>
+        </Label>
+        <Label x:Name="twitter" Style="{StaticResource ResourceKey=HyperlinkLabel}" HorizontalAlignment="Left" Width="46" VerticalAlignment="Top" Grid.Row="2" Margin="551,444,0,0">
+            <Hyperlink NavigateUri="https://twitter.com/MillenaireZenos" RequestNavigate="Hyperlink_RequestNavigate">Twitter</Hyperlink>
+        </Label>
+
+        <Grid x:Name="BarGrid" Grid.RowSpan="3" Margin="126,5,126,-6">
+            <ProgressBar HorizontalAlignment="Center" Height="0" VerticalAlignment="Top" Width="546" Margin="0,524,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="2" VerticalAlignment="Top" Width="546" Margin="0,522,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="0" VerticalAlignment="Top" Width="546" Margin="0,522,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="2" VerticalAlignment="Top" Width="546" Margin="0,520,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="0" VerticalAlignment="Top" Width="546" Margin="0,520,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="2" VerticalAlignment="Top" Width="546" Margin="0,518,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="0" VerticalAlignment="Top" Width="546" Margin="0,518,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="2" VerticalAlignment="Top" Width="546" Margin="0,516,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="0" VerticalAlignment="Top" Width="546" Margin="0,516,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="2" VerticalAlignment="Top" Width="546" Margin="0,514,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="0" VerticalAlignment="Top" Width="546" Margin="0,514,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="2" VerticalAlignment="Top" Width="546" Margin="0,512,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="0" VerticalAlignment="Top" Width="546" Margin="0,512,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="2" VerticalAlignment="Top" Width="546" Margin="0,510,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="0" VerticalAlignment="Top" Width="546" Margin="0,510,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
+            <ProgressBar HorizontalAlignment="Center" Height="2" VerticalAlignment="Top" Width="546" Margin="0,508,0,0" Value="0" BorderBrush="#FFEAE3E3" Foreground="#FF52CD19" />
         </Grid>
-        <Border x:Name="TopBar" Height="42" VerticalAlignment="Top" MouseDown="MoveWindow">
+        <Border x:Name="TopBar" Height="54" VerticalAlignment="Top" MouseDown="MoveWindow" Grid.RowSpan="2" Opacity="0.01">
             <Border.Background>
-                <ImageBrush x:Name="TopBarBg" ImageSource="Resources/s1.png" Stretch="UniformToFill" Viewport="0,0,800,500" ViewportUnits="Absolute" AlignmentY="Top">
+                <ImageBrush x:Name="TopBarBg" ImageSource="/Resources/LOGO DD2.png" Stretch="UniformToFill" Viewport="0,0,800,500" ViewportUnits="Absolute" AlignmentY="Top">
                     <ImageBrush.RelativeTransform>
                         <TransformGroup>
                             <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1.5" ScaleY="1.5"/>
@@ -187,46 +271,16 @@
                 <BlurEffect Radius="20"/>
             </Border.Effect>
         </Border>
-        <Label x:Name="windowName" Content="Dimension Defender" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Width="361" FontFamily="Barlow Condensed Medium" FontSize="20" Foreground="White" MouseDown="MoveWindow"/>
-        <Label x:Name="infoLabel" Content="Info label (Here goes speed, status and any info available)" Margin="41,533,191,8" FontFamily="Barlow Condensed" FontSize="14" Foreground="LightGray"/>
-        <Border x:Name="optionWindow" Margin="0,42,0,0" Background="#FF23272B" Visibility="Hidden">
+        <Label x:Name="windowName" Content="Dimension Defender" HorizontalAlignment="Left" Margin="0,-136,0,0" VerticalAlignment="Top" Width="361" FontFamily="Barlow Condensed Medium" FontSize="20" Foreground="White" MouseDown="MoveWindow"/>
+        <Label x:Name="infoLabel" Content="Info label (Here goes speed, status and any info available)" Margin="0,406,0,10" FontFamily="Barlow Condensed" FontSize="14" Foreground="LightGray" Grid.Row="2" HorizontalAlignment="Center"/>
+        <Border x:Name="optionWindow" Margin="0,20,0,0" Background="#FF23272B" Visibility="Hidden" Grid.RowSpan="2" Grid.Row="1">
             <Grid>
-                <Grid Margin="32,224,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid Margin="32,224,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*" />
                         <ColumnDefinition Width="1*" />
                         <ColumnDefinition Width="1*" />
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="recoveryButton" Content="{x:Static language:Lang.recover}" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="Recover" Margin="0,0,10,0">
-                        <Button.Template>
-                            <ControlTemplate TargetType="{x:Type ButtonBase}">
-                                <Border x:Name="border" CornerRadius="2" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
-                                    <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                                </Border>
-                                <ControlTemplate.Triggers>
-                                    <Trigger Property="Button.IsDefaulted" Value="True">
-                                        <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                                    </Trigger>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="BorderBrush" TargetName="border" Value="#FF1B86FF"/>
-                                    </Trigger>
-                                    <Trigger Property="IsPressed" Value="True">
-                                        <Setter Property="Background" TargetName="border" Value="#FF062640"/>
-                                        <Setter Property="BorderBrush" TargetName="border" Value="#FF1B86FF"/>
-                                    </Trigger>
-                                    <Trigger Property="ToggleButton.IsChecked" Value="True">
-                                        <Setter Property="Background" TargetName="border" Value="#FFBCDDEE"/>
-                                        <Setter Property="BorderBrush" TargetName="border" Value="#FF245A83"/>
-                                    </Trigger>
-                                    <Trigger Property="IsEnabled" Value="False">
-                                        <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
-                                        <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
-                                        <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#FF838383"/>
-                                    </Trigger>
-                                </ControlTemplate.Triggers>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
                 </Grid>
                 <Label x:Name="label" Content="{x:Static language:Lang.save_picker}" HorizontalAlignment="Left" Margin="16,116,0,0" VerticalAlignment="Top" Foreground="#FFBBBBBB" Width="154" FontSize="14"/>
                 <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,145,0,0">
@@ -420,9 +474,7 @@
                     </Button>
                 </Grid>
                 <!--Please, don't remove the following label. Share with everyone the tool you have used for create your launcher. Thank you!-->
-                <Label x:Name="basedLabel" Style="{StaticResource ResourceKey=HyperlinkLabel}" Margin="16,0,0,453" HorizontalAlignment="Left" Width="364" VerticalAlignment="Bottom">
-                    <Hyperlink NavigateUri="https://github.com/sasso-effe/XVLauncher" RequestNavigate="Hyperlink_RequestNavigate">Based on XVLauncher: The open-source launcher for your app.</Hyperlink>
-                </Label>
+
                 <Label Content="{x:Static language:Lang.other_options}" HorizontalAlignment="Left" Margin="16,195,0,0" VerticalAlignment="Top" Foreground="#FFBBBBBB" Width="154" FontSize="14"/>
                 <Label x:Name="game_version_label" Content="{x:Static language:Lang.game_version}" HorizontalAlignment="Left" Margin="16,10,0,0" VerticalAlignment="Top" Foreground="#FFBBBBBB" FontSize="14"/>
                 <Separator Height="1" VerticalAlignment="Top" Margin="0,44,0,0"/>
@@ -436,7 +488,7 @@
             </Grid>
         </Border>
 
-        <Button x:Name="closeButton" HorizontalAlignment="Left" Margin="755,0,0,0" VerticalAlignment="Top" Width="45" Height="42" Click="CloseWindow" BorderThickness="0" Cursor="Hand">
+        <Button x:Name="closeButton" HorizontalAlignment="Left" Margin="750,5,0,0" VerticalAlignment="Top" Width="44" Height="42" Click="CloseWindow" BorderThickness="0" Cursor="Hand" Grid.RowSpan="2">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="Transparent"/>
@@ -476,7 +528,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="optionsButton" HorizontalAlignment="Left" Margin="708,0,0,0" VerticalAlignment="Top" Width="47" Height="42" Click="ToggleOptions" BorderThickness="0" Cursor="Hand">
+        <Button x:Name="optionsButton" HorizontalAlignment="Left" Margin="244,-144,0,0" VerticalAlignment="Top" Width="48" Height="42" Click="ToggleOptions" BorderThickness="0" Cursor="Hand">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="Transparent"/>
@@ -515,7 +567,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Border x:Name="noticeWindow" Margin="0,42,0,0" Background="#FF23272B" Visibility="Hidden">
+        <Border x:Name="noticeWindow" Margin="0,20,0,0" Background="#FF23272B" Visibility="Hidden" Grid.RowSpan="2" Grid.Row="1">
             <Grid>
                 <Label HorizontalAlignment="Left" Margin="16,78,0,0" VerticalAlignment="Top" Width="100">
                     <Hyperlink NavigateUri="https://docs.gitlab.com/ee/api/" RequestNavigate="Hyperlink_RequestNavigate">Gitlab API</Hyperlink>
@@ -572,6 +624,6 @@
 
             </Grid>
         </Border>
-        <Image x:Name="splash" Source="Resources/splash.png" Margin="0,0,0,0" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" d:IsHidden="True"/>
+        <Image x:Name="splash" Source="Resources/splash.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Top" d:IsHidden="True" Grid.RowSpan="3"/>
     </Grid>
 </Window>
