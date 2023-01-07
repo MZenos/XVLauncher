@@ -176,7 +176,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Resource Include="Resources\topbar.png" />
+    <Resource Include="Resources\truc.png" />
     <Resource Include="LogoXVL.ico" />
+    <Resource Include="Resources\LOGO DD2.png" />
     <Content Include="Resources\s1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -207,6 +210,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <Content Include="Resources\s4.png">

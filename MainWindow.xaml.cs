@@ -599,6 +599,10 @@ namespace XVLauncher
                 element.RemoveHandler(routedEvent, routedEventHandler.Handler);
         }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
